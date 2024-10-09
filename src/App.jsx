@@ -27,7 +27,7 @@ const Login = lazy(() => import("./pages/Login"));
 
 export default function App() {
   return (
-    <div>
+    
       <AuthProvider>
         <CitiesProvider>
           <BrowserRouter>
@@ -57,6 +57,6 @@ export default function App() {
           </BrowserRouter>
         </CitiesProvider>
       </AuthProvider>
-    </div>
+    
   );
 }

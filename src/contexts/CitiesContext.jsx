@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react/prop-types */
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useCallback, useContext, useEffect, useReducer } from "react";
 const BASE_URL = `http://localhost:8000`;
 const CitiesContext = createContext();
 
@@ -78,7 +78,7 @@ function CitiesProvider({ children }) {
     fetchCities();
   }, []);
 
-  async function getCity(id) {
+  const getCity = useCallback( async function getCity(id) {
     if (Number(id) === currentCity.id) return;
     dispatch({ type: "loading" });
     try {
@@ -92,6 +92,7 @@ function CitiesProvider({ children }) {
       });
     }
   }
+,[currentCity.id])
   // const navigate=useNavigate()
   async function createCity(newCity) {
     dispatch({ type: "loading" });
@@ -102,7 +103,7 @@ function CitiesProvider({ children }) {
         headers: { "Content-Type": "application/json" },
       });
       const city = await res.json();
-      dispatch({ type: "city/loaded", payload: city });
+      dispatch({ type: "city/created", payload: city });
     } catch {
       dispatch({
         type: "rejected",

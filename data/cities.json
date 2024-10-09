@@ -25,27 +25,15 @@
       "id": "17806751"
     },
     {
-      "id": "e209",
-      "cityName": "Lagos",
-      "country": "Nigeria",
-      "date": "2024-04-26T10:17:11.954Z",
-      "notes": "NEW LAGOS",
-      "emoji": "🇳🇬",
-      "position": {
-        "lat": "6.428577530758018",
-        "lng": "3.6872863769531254"
-      }
-    },
-    {
-      "id": "c628",
-      "cityName": "London",
+      "id": "f174",
+      "cityName": "Kettleshulme",
       "country": "United Kingdom of Great Britain and Northern Ireland (the)",
-      "date": "2024-05-29T14:03:59.249Z",
+      "date": "2024-10-09T13:55:38.869Z",
       "notes": "new",
       "emoji": "🇬🇧",
       "position": {
-        "lat": "51.467696956223385",
-        "lng": "-0.06591796875000001"
+        "lat": "53.330872983017066",
+        "lng": "-2.0214843750000004"
       }
     }
   ]
